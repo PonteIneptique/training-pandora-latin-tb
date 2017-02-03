@@ -24,4 +24,7 @@ perseids:
 split:
 	python3 dispatcher.py
 
+lemmas:
+	java -cp /usr/share/java/Saxon-HE.jar net.sf.saxon.Transform -o:data/known_lemmas.txt lat.ls.perseus-eng1.xml ls.converter.xsl;\
+
 data: perseids transform-xml split
